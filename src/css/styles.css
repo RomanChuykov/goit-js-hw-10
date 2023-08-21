@@ -1,0 +1,32 @@
+.cat-info{
+    display: flex;
+    /* justify-content: end; */
+    max-width: 630px;
+    flex-wrap: wrap;
+    
+    padding: 10px;
+    gap: 20px;
+}
+.cat-img{
+/* height:200px; */
+width: 300px;
+/* padding-bottom: 200px; */
+/* display: none; */
+/* margin-right: 20px; */
+}
+.temperament{
+    width: 250px;
+    /* text-align: right; */
+    /* margin-left: 330px; */
+}
+.description{
+width: 250px;
+margin: 0;
+}
+.nameBreed{
+    height: 30px;
+    width: 250px;
+    /* display: inline-block; */
+    text-align: center;
+    margin: 0;
+}
