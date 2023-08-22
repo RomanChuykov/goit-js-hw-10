@@ -63,7 +63,8 @@ export function fetchBreed(){
 html.loader.style.display='none';
 })
 .catch(function(error) {
-  html.breed.style.display='none';
+  // html.breed.style.display='none';
+  html.loader.style.display='none';
   html.error.style.display='block';
 
 });
