@@ -14,7 +14,7 @@ let storedBreeds = [];
     catInfo:document.querySelector('.cat-info'),
     breed:document.querySelector(".breed-select")
  }
- html.breed.style.display='none';
+//  html.breed.style.display='none';
 html.loader.style.display='block';
 html.error.style.display='none';
 // ========================================================================
