@@ -28,7 +28,7 @@ html.error.style.display='block';
     
 }
 export function fetchBreed(){
-  html.breed.style.display='none';
+  // html.breed.style.display='none';
   console.log('no breed')
   fetch(urlBreeds,{headers: {
     'x-api-key': APIkey
@@ -39,7 +39,7 @@ export function fetchBreed(){
   .then((data) => {
       
       //filter to only include those with an `image` object
-      // data = data.filter(img=> img.image?.url!=null)
+      data = data.filt  er(img=> img.image?.url!=null)
       let option = document.createElement('option');
       option.value =0;//i
       option.innerHTML = `Select a cat breed`;
