@@ -14,7 +14,7 @@ let storedBreeds = [];
     catInfo:document.querySelector('.cat-info'),
     breed:document.querySelector(".breed-select")
  }
-//  html.breed.style.display='none';
+
 html.loader.style.display='block';
 html.error.style.display='none';
 // ========================================================================
@@ -25,6 +25,7 @@ fetchBreed();
 html.breed.addEventListener('input', function(event) {
    
     // html.breed.style.display='none';
+    html.catInfo.innerHTML=''
     html.loader.style.display='block';
     const selectedValue = event.target.value;
     

@@ -8,6 +8,7 @@ const html={
   catInfo:document.querySelector('.cat-info'),
   breed:document.querySelector(".breed-select")
 }
+let storedBreeds = [];
 
 let informBreed = {};
 export const fetchCatByBreed = function(breedId) {
@@ -28,7 +29,7 @@ html.error.style.display='block';
     
 }
 export function fetchBreed(){
-  // html.breed.style.display='none';
+  html.breed.style.display='none';
   console.log('no breed')
   fetch(urlBreeds,{headers: {
     'x-api-key': APIkey
@@ -39,7 +40,7 @@ export function fetchBreed(){
   .then((data) => {
       
       //filter to only include those with an `image` object
-      data = data.filt  er(img=> img.image?.url!=null)
+      data = data.filter(img=> img.image?.url!=null)
       let option = document.createElement('option');
       option.value =0;//i
       option.innerHTML = `Select a cat breed`;
@@ -65,10 +66,10 @@ export function fetchBreed(){
 html.loader.style.display='none';
 })
 .catch(function(error) {
-  // html.breed.style.display='none';
+  html.breed.style.display='none';
   html.loader.style.display='none';
   html.error.style.display='block';
-
+ 
 });
 
 
