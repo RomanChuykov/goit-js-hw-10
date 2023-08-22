@@ -30,7 +30,7 @@ html.error.style.display='block';
 }
 export function fetchBreed(){
   html.breed.style.display='none';
-  console.log('no breed')
+  
   fetch(urlBreeds,{headers: {
     'x-api-key': APIkey
   }})
@@ -48,7 +48,7 @@ export function fetchBreed(){
       storedBreeds = data;
       
       html.breed.style.display='block';
-      console.log('breed.on')
+      
       for (let i = 0; i < storedBreeds.length; i++) {
           const breed = storedBreeds[i];
           let option = document.createElement('option');

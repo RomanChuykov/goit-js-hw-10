@@ -20,7 +20,7 @@ html.error.style.display='none';
 // ========================================================================
 fetchBreed();
 
- console.log('afterbreed')
+
 // =======================================================================
 html.breed.addEventListener('input', function(event) {
    
