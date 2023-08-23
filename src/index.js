@@ -14,11 +14,40 @@ let storedBreeds = [];
     catInfo:document.querySelector('.cat-info'),
     breed:document.querySelector(".breed-select")
  }
-
+html.breed.style.display='none'
 html.loader.style.display='block';
 html.error.style.display='none';
 // ========================================================================
-fetchBreed();
+fetchBreed()
+.then((data) =>{
+      
+      let option = document.createElement('option');
+      option.value =0;//i
+      option.innerHTML = `Select a cat breed`;
+      document.querySelector('.breed-select').appendChild(option);
+      storedBreeds = data;
+      
+      html.breed.style.display='block';
+      
+      for (let i = 0; i < storedBreeds.length; i++) {
+        const breed = storedBreeds[i];
+          let option = document.createElement('option');
+        option.value = breed.id;//i
+        option.innerHTML = `${breed.name}`;
+        document.querySelector('.breed-select').appendChild(option);
+  
+}
+// html.breed.style.display='block';
+html.loader.style.display='none';
+})
+.catch(function(error) {
+  html.breed.style.display='none';
+  html.loader.style.display='none';
+  html.error.style.display='block';
+ 
+});
+
+
 
 
 // =======================================================================
